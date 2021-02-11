@@ -1,9 +1,11 @@
-GET http://127.0.0.1:5000/view-activities HTTP/1.1
+POST  http://127.0.0.1:5000/127.0.0.1:5000/create-user HTTP/1.1
 Host: 127.0.0.1
 Content-Type: application/json
 Content-Length: 100
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyfQ.1bK0owTO84gn329bdheS1DZ5z-hsz1_af2gciEOPub0
 
 {
-    "name": "Go home"
+    "name": "Amala",
+     "password": "Ewedu",
+     "email" : "amalaatiewedu@motun.com"
 }
