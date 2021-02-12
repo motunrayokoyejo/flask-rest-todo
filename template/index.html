@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest API</title>
+</head>
+<body>
+    Hello, This is my first Rest API. I built it with Flask and SQLAlchemy.
+    Endpoints are 
+    <ul>
+        <li>create-user</li>
+        <li>login</li>
+        <li>create-activity</li>
+        <li>view-activities</li>
+        <li>/view-activities/<int:id></li>
+    </ul>
+    <p>parameters for the '/create-user' endpoints are name, password and email.
+        Name must be between 4 and 20 characters,email must be between 10 mand 40 characters and 
+        password must be between 6 and 20 characters!
+    </p>
+    <p>parameters for the '/login' endpoints are email and password. they must match with the ones used to create user</p>
+
+</body>
+</html>

@@ -1,11 +1,11 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import bcrypt, jwt
 from typing import Dict
 from functools import wraps
 from flask_sqlalchemy import SQLAlchemy
 from datetime import date
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="template")
 
 app.config['SECRET_KEY']='something secret'
 app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///app.db'
@@ -59,6 +59,10 @@ def token_required(f):
         return f(current_user, *args, **kwargs)
 
     return decorated
+
+@app.route('/', methods=['GET'])
+def homepage():
+    return render_template ('index.html')
 
 @app.route('/create-user', methods=['POST'])
 def create_user():
